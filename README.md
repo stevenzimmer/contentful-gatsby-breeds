@@ -1,49 +1,44 @@
-<p align="center">
-  <a href="https://www.gatsbyjs.com/?utm_source=starter&utm_medium=readme&utm_campaign=minimal-starter-ts">
-    <img alt="Gatsby" src="https://www.gatsbyjs.com/Gatsby-Monogram.svg" width="60" />
-  </a>
-</p>
-<h1 align="center">
-  Gatsby Minimal TypeScript Starter
-</h1>
+# Gatsby and Contentful Pet Breeds
 
-## 🚀 Quick start
+## 🚀 Startup 
 
-1.  **Create a Gatsby site.**
-
-    Use the Gatsby CLI to create a new site, specifying the minimal TypeScript starter.
-
-    ```shell
-    # create a new Gatsby site using the minimal TypeScript starter
-    npm init gatsby -- -ts
-    ```
-
-2.  **Start developing.**
+**To view the site in local environment.**
 
     Navigate into your new site’s directory and start it up.
 
     ```shell
-    cd my-gatsby-site/
+    cd gatsby-contentful-breeds/
+    npm i
     npm run develop
     ```
 
-3.  **Open the code and start customizing!**
+    The site can now be seen in browser at http://localhost:8000!
 
-    Your site is now running at http://localhost:8000!
+## Structure
 
-    Edit `src/pages/index.tsx` to see your site update in real-time!
+  The content is structured as follows
 
-4.  **Learn more**
+  Content associations: 
+  - 1 pet type attached to each breed
+  - multiple breed can be attached to pet type
 
-    - [Documentation](https://www.gatsbyjs.com/docs/?utm_source=starter&utm_medium=readme&utm_campaign=minimal-starter-ts)
-    - [Tutorials](https://www.gatsbyjs.com/docs/tutorial/?utm_source=starter&utm_medium=readme&utm_campaign=minimal-starter-ts)
-    - [Guides](https://www.gatsbyjs.com/docs/how-to/?utm_source=starter&utm_medium=readme&utm_campaign=minimal-starter-ts)
-    - [API Reference](https://www.gatsbyjs.com/docs/api-reference/?utm_source=starter&utm_medium=readme&utm_campaign=minimal-starter-ts)
-    - [Plugin Library](https://www.gatsbyjs.com/plugins?utm_source=starter&utm_medium=readme&utm_campaign=minimal-starter-ts)
-    - [Cheat Sheet](https://www.gatsbyjs.com/docs/cheat-sheet/?utm_source=starter&utm_medium=readme&utm_campaign=minimal-starter-ts)
+  Homepage
+  - Lists the Pet Types cards
 
-## 🚀 Quick start (Netlify)
+  /{pet-type}-breeds/
+  - Lists the breeds cards for that pet type
+  
+  /{pet-type}-breeds/{breedName}
+   - A page of details about the breed
 
-Deploy this starter with one click on [Netlify](https://app.netlify.com/signup):
+## Future State
 
-[<img src="https://www.netlify.com/img/deploy/button.svg" alt="Deploy to Netlify" />](https://app.netlify.com/start/deploy?repository=https://github.com/gatsbyjs/gatsby-starter-minimal-ts)
+  If more pet types are added in Contentful CMS and then breeds are added to that pet type then those will automatically show on the homepage and details pages will be generated accordingly.
+
+## 🚀 ToDos
+
+  - Refactor the cards into a reusable component.
+  - Add page meta tags
+  - Revamp the overall layout/design
+  - Create graceful enhancements for loading, error, and empty states.
+  - Restructure and unionize the naming conventions for each content type

@@ -31,26 +31,30 @@ export const createPages: GatsbyNode["createPages"] = async ({ graphql, actions 
 
   // Generate Details pages for each breed
   data?.allContentfulPet.nodes.forEach((node) => {
-    node.breed.forEach((breed) => {
-      
-      // Create a page for each Pet Type
-      createPage({
-        path: `/${node.slug}-breeds/`,
-        component: path.resolve(`./src/templates/pet-type.tsx`),
-        context: {
-          slug: node.slug
-        },
-      });
 
-      // Create a Pet Type child page for each breed
-      createPage({
-        path: `/${node.slug}-breeds/${breed.slug}/`,
-        component: path.resolve(`./src/templates/breed-details.tsx`),
-        context: {
-          parentSlug: node.slug,
-          slug: breed.slug
-        },
-      });
+    // Create a page for each Pet Type
+    createPage({
+      path: `/${node.slug}-breeds/`,
+      component: path.resolve(`./src/templates/pet-type.tsx`),
+      context: {
+        slug: node.slug
+      },
     });
+
+    if( node.breed !== null ) {
+
+      node.breed.forEach((breed) => {  
+
+        // Create a Pet Type child page for each breed
+        createPage({
+          path: `/${node.slug}-breeds/${breed.slug}/`,
+          component: path.resolve(`./src/templates/breed-details.tsx`),
+          context: {
+            parentSlug: node.slug,
+            slug: breed.slug
+          },
+        });
+      });
+    }
   });
 }

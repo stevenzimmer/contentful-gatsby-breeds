@@ -1,10 +1,14 @@
+// import gatsby dotenv to use .env file
+require("dotenv").config({
+  path: `.env`,
+});
+
+
 import type { GatsbyConfig } from "gatsby";
 
 const config: GatsbyConfig = {
   siteMetadata: {
-    title: `Gatsby Contentful Breeds`,
-    siteUrl: `https://www.yourdomain.tld`,
-    description: "A Gatsby website integrated with Contentful that displays pet types and their breeds."
+    title: `Pets and their Breeds`,
   },
   // More easily incorporate content into your pages through automatic TypeScript type generation and better GraphQL IntelliSense.
   // If you use VSCode you can also use the GraphQL plugin
@@ -13,8 +17,8 @@ const config: GatsbyConfig = {
   plugins: [{
     resolve: 'gatsby-source-contentful',
     options: {
-      "accessToken": "ZkclQjNG2Nn371r3IZFZYK82bnWZXDzhH-sR36U7KaE",
-      "spaceId": "74qx6lxl23kw"
+      "accessToken": process.env.CONTENTFUL_ACCESS_TOKEN,
+      "spaceId": process.env.CONTENFUL_SPACE_ID
     }
   }, "gatsby-plugin-image", "gatsby-plugin-sharp", "gatsby-transformer-sharp", "gatsby-plugin-postcss", {
     resolve: 'gatsby-source-filesystem',

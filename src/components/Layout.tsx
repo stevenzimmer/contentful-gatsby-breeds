@@ -1,11 +1,11 @@
 import React, {ReactNode} from 'react'
-import NavBar from './NavBar'
+import Header from './Header'
 
 export default function Layout({ children }: { children: ReactNode }) {
   return (
-    <div className='bg-black text-white'>
-      <NavBar />
-      <main className='container mx-auto p-6'>
+    <div className="py-24">
+      <Header />
+      <main className='container py-6'>
       {children}
       </main>
     </div>
