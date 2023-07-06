@@ -42,3 +42,4 @@
   - Revamp the overall layout/design
   - Create graceful enhancements for loading, error, and empty states.
   - Restructure and unionize the naming conventions for each content type
+  - Better featured image for Dog breeds.
