@@ -8,7 +8,7 @@
 
     ```shell
     cd gatsby-contentful-breeds/
-    npm i
+    npm install
     npm run develop
     ```
 
