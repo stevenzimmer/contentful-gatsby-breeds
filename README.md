@@ -23,19 +23,19 @@
   - multiple breed can be attached to pet type
 
   Homepage
-  - Lists the Pet Types cards
+  - Lists the Pet Type cards
 
   /{pet-type}-breeds/
-  - Lists the breeds cards for that pet type
+  - Lists the breeds cards associated to that pet type
   
   /{pet-type}-breeds/{breedName}
-   - A page of details about the breed
+   - A page of details about the selected breed
 
 ## Future State
 
-  If more pet types are added in Contentful CMS and then breeds are added to that pet type then those will automatically show on the homepage and details pages will be generated accordingly.
+  When more pet types are added in Contentful CMS and breeds are then added to that pet type, the new pet type card will automatically render on the homepage and then the breed details pages will be generated accordingly.
 
-## 🚀 ToDos
+## ToDos
 
   - Refactor the cards into a reusable component.
   - Add page meta tags

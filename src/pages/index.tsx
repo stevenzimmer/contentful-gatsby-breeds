@@ -22,7 +22,7 @@ export default function PetsListing({data}: PageProps<PetListingPropTypes>) {
       <h2 className='text-2xl mb-6 text-center'>
         Pet Types
       </h2>
-      <div className='flex -mx-3'>
+      <div className='flex justify-center -mx-3'>
         {pets.map(pet => {
           const petImage = getImage(pet.image);
           return (
